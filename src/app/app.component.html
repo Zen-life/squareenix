@@ -26,15 +26,17 @@
   class="list-group">
   <div class="card-container">
     <li class="list-group-item">
-      <p>{{ game.name }}</p>
-      <p>{{ game.rating }}</p>
-      <p>{{ game.released }}</p>
+      <div class="square-content-container">
+      <p>Name: {{ game.name }}</p>
+      <p>Rating: {{ game.rating }}</p>
+      <p>Released Date: {{ game.released }}</p>
       <ul *ngFor="let pform of games[0].results[i].platforms; let i = index">
-        <li><p>{{ pform.platform.name }}</p></li>
+        <li><p>Platform: {{ pform.platform.name }}</p></li>
       </ul>
+    
       
-      <div><img style="max-width: 20%; height:auto" [src]="game.background_image" [alt]="game.name"/></div> 
-      
+      <div class="img-container"><img [src]="game.background_image" [alt]="game.name"/></div> 
+    </div>      
     </li>
   </div>
 </ul>
