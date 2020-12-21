@@ -18,7 +18,12 @@ export class GamesService {
 
    getGames() {
     return this.http.get(this.url)
-   
+  //  .catchError((error: Response) => {
+  //    if (error.status === 400) {
+  //       return Observable.throwError();
+        
+  //    }
+  //  })
   }
   
 }
